@@ -1,0 +1,24 @@
+{
+  "name": "generator-sfdxtend",
+  "version": "0.1.0",
+  "description": "Generator to scaffold an sfdxtend extension",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "generator-sfdxtend"
+  },
+  "keywords": [
+    "sfdx",
+    "sfdxtend",
+    "extend",
+    "extension"
+  ],
+  "author": "kev4ev",
+  "license": "MIT"
+}
