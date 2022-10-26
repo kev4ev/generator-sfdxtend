@@ -1,24 +1,22 @@
 {
-  "name": "generator-sfdxtend",
+  "name": "@alpha-bytes/generator-sfdxtend",
   "version": "0.1.0",
   "description": "Generator to scaffold an sfdxtend extension",
-  "main": "index.js",
-  "directories": {
-    "lib": "lib"
-  },
+  "main": "SfdxtensionGenerator.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "generator-sfdxtend"
   },
   "keywords": [
     "sfdx",
     "sfdxtend",
     "extend",
-    "extension"
+    "extension",
+    "yeoman-generator"
   ],
-  "author": "kev4ev",
-  "license": "MIT"
+  "author": "alpha-bytes",
+  "license": "MIT",
+  "dependencies": {
+    "yeoman-generator": "^5.7.0",
+    "@alpha-bytes/generator-sfdxtend": "^0.1.0"
+  }
 }
