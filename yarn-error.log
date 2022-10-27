@@ -1,0 +1,54 @@
+Arguments: 
+  /usr/share/node/node-v16.17.0-linux-x64/bin/node /usr/share/node/node-v14.15.5-linux-x64/bin/yarn global dir
+
+PATH: 
+  /usr/lib/jvm/jdk-11.0.6/bin:/usr/share/node/node-v16.17.0-linux-x64/bin:/usr/share/heroku/bin:/usr/lib/jvm/jdk-11.0.6/bin:/usr/share/node/node-v16.17.0-linux-x64/bin:/usr/share/heroku/bin:/usr/lib/jvm/jdk-11.0.6/bin:/usr/share/node/node-v16.17.0-linux-x64/bin:/usr/share/heroku/bin:/usr/lib/jvm/jdk-11.0.6/bin:/usr/share/node/node-v16.17.0-linux-x64/bin:/usr/share/heroku/bin:/usr/lib/jvm/jdk-11.0.6/bin:/usr/share/node/node-v16.17.0-linux-x64/bin:/usr/share/heroku/bin:/home/krice/Documents/projects/d11ty/node_modules/.bin:/home/krice/Documents/projects/node_modules/.bin:/home/krice/Documents/node_modules/.bin:/home/krice/node_modules/.bin:/home/node_modules/.bin:/node_modules/.bin:/usr/share/node/node-v16.17.0-linux-x64/lib/node_modules/npm/node_modules/@npmcli/run-script/lib/node-gyp-bin:/usr/lib/jvm/jdk-11.0.6/bin:/usr/share/node/node-v16.17.0-linux-x64/bin:/usr/share/heroku/bin:/usr/lib/jvm/jdk-11.0.6/bin:/usr/share/node/node-v16.17.0-linux-x64/bin:/usr/share/heroku/bin:/usr/lib/jvm/jdk-11.0.6/bin:/usr/share/node/node-v16.17.0-linux-x64/bin:/usr/share/heroku/bin:/usr/lib/jvm/jdk-11.0.6/bin:/usr/share/node/node-v14.15.5-linux-x64/bin:/usr/share/heroku/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+
+Yarn version: 
+  1.22.19
+
+Node version: 
+  16.17.0
+
+Platform: 
+  linux x64
+
+Trace: 
+  SyntaxError: /home/krice/Documents/projects/generator-sfdxtend/package.json: Unexpected string in JSON at position 169
+      at JSON.parse (<anonymous>)
+      at /usr/share/node/node-v14.15.5-linux-x64/lib/node_modules/yarn/lib/cli.js:1629:59
+      at Generator.next (<anonymous>)
+      at step (/usr/share/node/node-v14.15.5-linux-x64/lib/node_modules/yarn/lib/cli.js:310:30)
+      at /usr/share/node/node-v14.15.5-linux-x64/lib/node_modules/yarn/lib/cli.js:321:13
+
+npm manifest: 
+  {
+    "name": "@alpha-bytes/generator-sfdxtend",
+    "version": "0.1.0",
+    "description": "Generator to scaffold an sfdxtend extension",
+    "files": [
+      "generators"
+    ]
+    "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [
+      "sfdx",
+      "sfdxtend",
+      "extend",
+      "extension",
+      "yeoman-generator"
+    ],
+    "author": "alpha-bytes",
+    "license": "MIT",
+    "dependencies": {
+      "yeoman-generator": "^5.7.0",
+      "@alpha-bytes/sfdxtend": "^0.1.0"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile

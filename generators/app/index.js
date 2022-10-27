@@ -1,4 +1,4 @@
-const Sfdxtension = require('../../lib/Sfdxtension');
+const Generator = require('yeoman-generator');
 const pkg = require('../../package.json');
 const glob = require('glob');
 const path = require('path/posix');
@@ -6,23 +6,21 @@ const fs = require('fs');
 
 const GEN_SUFFIX = 'Sfdxtension';
 
-class SfdxtensionGenerator extends Sfdxtension{
-
-    constructor(...args){
-        /** ensure you leave this line in as base class requires __dirname to be passed from subclass */
-        super(__dirname, ...args);
-    }
+class SfdxtensionGenerator extends Generator{
 
     async initializing(){
-        // add self as project dependency
-        let dep = {};
-        dep[`${pkg.name}`] = `^${pkg.version}`;
-        await this.addDependencies(dep);
+        // add sfdxtends as project dependency
+        let dep = {},
+            name = '@alpha-bytes/sfdxtend',
+            version = pkg.devDependencies[dep];
+        dep[name] = version;
+        // await this.addDependencies(dep);
+        this.tmplData = { sfdxtendVersion: version }
     }
     
     async prompting(){
         let extNameClosure = 'MySfdxtension';
-        this.answers = await this.prompt([
+        let answers = await this.prompt([
             {
                 name: 'extName',
                 message: 'What is the name of your extension?',
@@ -48,10 +46,11 @@ class SfdxtensionGenerator extends Sfdxtension{
                 }
             }
         ]);
+        Object.assign(this.tmplData, answers);
     }
 
     async writing(){
-        let { directory, extName } = this.answers;
+        let { directory, extName, sfdxtendVersion } = this.tmplData;
         if(!fs.existsSync(directory)){
             fs.mkdirSync(directory);
         }
@@ -59,7 +58,7 @@ class SfdxtensionGenerator extends Sfdxtension{
         this.fs.copyTpl(
             glob.sync(this.templatePath('**/*'), { dot: true }), 
             this.destinationPath(), 
-            { extName }
+            { extName, sfdxtendVersion }
         );
     }
 
